@@ -1,0 +1,16 @@
+# Ignore artifacts:
+dist
+e2e
+node_modules
+src/polyfills.ts
+src/test.ts
+.prettierignore
+.prettierrc
+angular.json
+karma.conf.js
+package.json
+package-lock.json
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
+tslint.json
