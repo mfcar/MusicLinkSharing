@@ -1,0 +1,15 @@
+<form [formGroup]="formUrlBreaker" (ngSubmit)="breakUrl()">
+  <label for="txtUrl">URL:</label>
+  <input id="txtUrl" type="url" formControlName="url"/>
+  <input type="submit" value="Load"/>
+</form>
+
+<ng-container *ngIf="track">
+  <p>
+    <strong>Music:</strong> {{track?.name}}<br/>
+    <strong>Artist:</strong> {{track?.artists?.name}}<br/>
+    <strong>Album:</strong> {{track?.album?.name}}
+  </p>
+</ng-container>
+
+<pre>{{ track | json }}</pre>
