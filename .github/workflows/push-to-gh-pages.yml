@@ -25,7 +25,7 @@ jobs:
         run: |
           npm install -g @angular/cli
           npm ci
-          ng deploy --repo=https://github.com/mfcar/MusicLinkSharing.git --name=musiclinksharing --email=$EMAIL --message="Build from ${GITHUB_SHA} in the source repository." --branch=main
+          ng deploy --repo=https://github.com/mfcar/MusicLinkSharing.git --name=musiclinksharing --email=$EMAIL --message="Build from ${GITHUB_SHA} in the source repository." --branch=github_page
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GITHUBTOKEN }}
