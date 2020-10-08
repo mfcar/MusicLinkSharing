@@ -19,6 +19,7 @@ import { DeezerArtistComponent } from './deezer/deezer-artist/deezer-artist.comp
 import { AppleMusicTrackComponent } from './appleMusic/apple-music-track/apple-music-track.component';
 import { AppleMusicAlbumComponent } from './appleMusic/apple-music-album/apple-music-album.component';
 import { AppleMusicArtistComponent } from './appleMusic/apple-music-artist/apple-music-artist.component';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AppleMusicArtistComponent } from './appleMusic/apple-music-artist/apple
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
