@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {SpotifyService} from '../../shared/services/spotify.service';
 import {SpotifyTrack} from '../../shared/models/spotify.model';
+import {UrlBreakService} from '../../shared/services/url-break.service';
 
 @Component({
   selector: 'app-paste-url-bar',
@@ -18,15 +19,20 @@ export class PasteUrlBarComponent implements OnInit {
     ]),
   });
 
-  constructor(private spotifyService: SpotifyService) { }
+  constructor(private spotifyService: SpotifyService, private urlBreak: UrlBreakService) {
+  }
 
   ngOnInit(): void {
   }
 
   breakUrl(): void {
     console.log('Breaking URL:');
-    console.log('URL: ' + this.formUrlBreaker.controls.url.value);
-    this.spotifyService.getInfoByTrackId('20I6sIOMTCkB6w7ryavxtO').subscribe((trackInfo) => {
+    console.log(this.urlBreak.urlBreaking(this.formUrlBreaker.controls.url.value));
+
+    const url = this.urlBreak.urlBreaking(this.formUrlBreaker.controls.url.value);
+    const objectId = this.spotifyService.getTrackIdFromUrl(url?.pathname);
+
+    this.spotifyService.getInfoByTrackId(objectId).subscribe((trackInfo) => {
       this.track = trackInfo;
     });
   }

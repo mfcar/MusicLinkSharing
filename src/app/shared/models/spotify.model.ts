@@ -35,7 +35,7 @@ export interface SpotifyRestriction {
 
 export interface SpotifyTrack {
   album: SpotifyAlbumSimplified;
-  artists: SpotifyArtistSimplified;
+  artists: SpotifyArtistSimplified[];
   available_markets: string[];
   disc_number: number;
   duration_ms: number;
