@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    target-branch: "dependency-updates"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+    labels:
+      - "npm dependencies"
