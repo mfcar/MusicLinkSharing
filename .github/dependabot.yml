@@ -2,7 +2,7 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
-    target-branch: "dependency-updates"
+    target-branch: "main"
     schedule:
       interval: "weekly"
       day: "sunday"
