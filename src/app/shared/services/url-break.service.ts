@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {MusicService} from '../models/music-service.enum';
-import {ObjectType} from '../models/object-type.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -25,12 +24,12 @@ export class UrlBreakService {
       return MusicService.Spotify;
     }
 
-    if (origin.includes('spotify')) {
-      return MusicService.Spotify;
+    if (origin.includes('apple')) {
+      return MusicService.AppleMusic;
     }
 
-    if (origin.includes('spotify')) {
-      return MusicService.Spotify;
+    if (origin.includes('deezer')) {
+      return MusicService.Deezer;
     }
 
     return MusicService.NotSupported;

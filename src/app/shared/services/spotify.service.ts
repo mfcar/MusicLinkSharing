@@ -55,7 +55,11 @@ export class SpotifyService {
     console.log(pathName);
     const parameters = pathName?.split('/');
     console.log(parameters);
-    return parameters[2];
+    if (parameters !== undefined && parameters.length === 2){
+      return parameters[2];
+    } else {
+      return '';
+    }
   }
 
   public getAlbumIdFromUrl(pathName: string): string {
