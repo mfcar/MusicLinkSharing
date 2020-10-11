@@ -1,0 +1,5 @@
+<form [formGroup]="formUrlBreaker" (ngSubmit)="breakUrl()">
+  <label for="txtUrl">URL:</label>
+  <input id="txtUrl" type="url" formControlName="url" placeholder="Paste your URL"/>
+  <input type="submit" value="Find"/>
+</form>
