@@ -1,5 +1,25 @@
 <form [formGroup]="formUrlBreaker" (ngSubmit)="breakUrl()">
-  <label for="txtUrl">URL:</label>
-  <input id="txtUrl" type="url" formControlName="url" placeholder="Paste your URL"/>
-  <input type="submit" value="Find"/>
+  <div class="p-4">
+    <div class="bg-white flex rounded shadow-xl">
+      <input class="w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none" id="txtUrl" type="url" formControlName="url" placeholder="Paste your URL" (keydown.enter)="breakUrl()">
+      <div class="p-2">
+        <button type="submit" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-700 focus:outline-none w-8 h-8 flex items-center justify-center">
+          <ng-container *ngIf="!searchingState; else loadingIcon">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+          </svg>
+          </ng-container>
+          <ng-template #loadingIcon>
+            <app-loading-icon></app-loading-icon>
+          </ng-template>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="p-1 flex justify-center">
+    <div class="bg-white flex items-center rounded shadow-md w-10/12 py-2 px-6">
+    Results
+    </div>
+  </div>
 </form>

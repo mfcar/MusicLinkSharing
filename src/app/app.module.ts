@@ -20,6 +20,13 @@ import { AppleMusicTrackComponent } from './appleMusic/apple-music-track/apple-m
 import { AppleMusicAlbumComponent } from './appleMusic/apple-music-album/apple-music-album.component';
 import { AppleMusicArtistComponent } from './appleMusic/apple-music-artist/apple-music-artist.component';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import { CardTrackComponent } from './layout/card-track/card-track.component';
+import { CardAlbumComponent } from './layout/card-album/card-album.component';
+import { CardArtistComponent } from './layout/card-artist/card-artist.component';
+import { CardShareLinkComponent } from './layout/card-share-link/card-share-link.component';
+import { HomeLinkFinderComponent } from './home-link-finder/home-link-finder.component';
+import { HomeUniversalSearchComponent } from './home-universal-search/home-universal-search.component';
+import { LoadingIconComponent } from './layout/loading-icon/loading-icon.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +44,14 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     DeezerArtistComponent,
     AppleMusicTrackComponent,
     AppleMusicAlbumComponent,
-    AppleMusicArtistComponent
+    AppleMusicArtistComponent,
+    CardTrackComponent,
+    CardAlbumComponent,
+    CardArtistComponent,
+    CardShareLinkComponent,
+    HomeLinkFinderComponent,
+    HomeUniversalSearchComponent,
+    LoadingIconComponent
   ],
   imports: [
     BrowserModule,

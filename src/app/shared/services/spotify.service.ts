@@ -55,9 +55,13 @@ export class SpotifyService {
     console.log(pathName);
     const parameters = pathName?.split('/');
     console.log(parameters);
-    if (parameters !== undefined && parameters.length === 2){
+    if (parameters !== undefined && parameters.length >= 2) {
+      console.log('Retornando:');
+      console.log(parameters);
+      console.log(parameters[2]);
       return parameters[2];
     } else {
+      console.log('Não retornando:');
       return '';
     }
   }

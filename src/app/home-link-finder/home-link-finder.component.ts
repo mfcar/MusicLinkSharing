@@ -11,6 +11,7 @@ import {UrlBreakService} from '../shared/services/url-break.service';
 })
 export class HomeLinkFinderComponent implements OnInit {
   public track: SpotifyTrack | undefined;
+  public searchingState = false;
 
   public formUrlBreaker = new FormGroup({
     url: new FormControl('', [
@@ -26,6 +27,7 @@ export class HomeLinkFinderComponent implements OnInit {
   }
 
   breakUrl(): void {
+    this.searchingState = true;
     console.log('Breaking URL:');
     console.log(this.urlBreak.urlBreaking(this.formUrlBreaker.controls.url.value));
 
@@ -34,6 +36,12 @@ export class HomeLinkFinderComponent implements OnInit {
 
     this.spotifyService.getInfoByTrackId(objectId).subscribe((trackInfo) => {
       this.track = trackInfo;
+    }, (error) => {
+      console.log('Error:');
+      console.log(error);
+      this.searchingState = false;
+    }, () => {
+      this.searchingState = false;
     });
   }
 
