@@ -1,0 +1,134 @@
+{
+  "configVersion": 1,
+  "timestamp": 1602463903203,
+  "index": "/MusicLinkSharing/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/MusicLinkSharing/favicon.ico",
+        "/MusicLinkSharing/index.html",
+        "/MusicLinkSharing/main.1293cdcf0b7d2f9dc7df.js",
+        "/MusicLinkSharing/polyfills.4b6db43574e16dcaa81b.js",
+        "/MusicLinkSharing/runtime.acf0dec4155e77772545.js",
+        "/MusicLinkSharing/styles.e63cc10e918fe1d73fb8.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/MusicLinkSharing/assets/icons/icon-128x128.png",
+        "/MusicLinkSharing/assets/icons/icon-144x144.png",
+        "/MusicLinkSharing/assets/icons/icon-152x152.png",
+        "/MusicLinkSharing/assets/icons/icon-192x192.png",
+        "/MusicLinkSharing/assets/icons/icon-384x384.png",
+        "/MusicLinkSharing/assets/icons/icon-512x512.png",
+        "/MusicLinkSharing/assets/icons/icon-72x72.png",
+        "/MusicLinkSharing/assets/icons/icon-96x96.png",
+        "/MusicLinkSharing/assets/img/icons/deezer-128.png",
+        "/MusicLinkSharing/assets/img/icons/deezer-256.png",
+        "/MusicLinkSharing/assets/img/icons/deezer-512.png",
+        "/MusicLinkSharing/assets/img/icons/deezer-64.png",
+        "/MusicLinkSharing/assets/img/icons/google-play-music-128.png",
+        "/MusicLinkSharing/assets/img/icons/google-play-music-256.png",
+        "/MusicLinkSharing/assets/img/icons/google-play-music-512.png",
+        "/MusicLinkSharing/assets/img/icons/google-play-music-64.png",
+        "/MusicLinkSharing/assets/img/icons/itunes-128.png",
+        "/MusicLinkSharing/assets/img/icons/itunes-256.png",
+        "/MusicLinkSharing/assets/img/icons/itunes-512.png",
+        "/MusicLinkSharing/assets/img/icons/itunes-64.png",
+        "/MusicLinkSharing/assets/img/icons/pandora-128.png",
+        "/MusicLinkSharing/assets/img/icons/pandora-256.png",
+        "/MusicLinkSharing/assets/img/icons/pandora-512.png",
+        "/MusicLinkSharing/assets/img/icons/pandora-64.png",
+        "/MusicLinkSharing/assets/img/icons/soundcloud-128.png",
+        "/MusicLinkSharing/assets/img/icons/soundcloud-256.png",
+        "/MusicLinkSharing/assets/img/icons/soundcloud-512.png",
+        "/MusicLinkSharing/assets/img/icons/soundcloud-64.png",
+        "/MusicLinkSharing/assets/img/icons/spotify-128.png",
+        "/MusicLinkSharing/assets/img/icons/spotify-256.png",
+        "/MusicLinkSharing/assets/img/icons/spotify-512.png",
+        "/MusicLinkSharing/assets/img/icons/spotify-64.png",
+        "/MusicLinkSharing/assets/img/icons/youtube-music-128.png",
+        "/MusicLinkSharing/assets/img/icons/youtube-music-256.png",
+        "/MusicLinkSharing/assets/img/icons/youtube-music-512.png",
+        "/MusicLinkSharing/assets/img/icons/youtube-music-64.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/MusicLinkSharing/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/MusicLinkSharing/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/MusicLinkSharing/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/MusicLinkSharing/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/MusicLinkSharing/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/MusicLinkSharing/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/MusicLinkSharing/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/MusicLinkSharing/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/MusicLinkSharing/assets/img/icons/deezer-128.png": "6088a206d3a76e083bfeaba6e7512d8463cb5c53",
+    "/MusicLinkSharing/assets/img/icons/deezer-256.png": "7ee6c1ee3d708e56dfa4acdb17f75092f16d0f70",
+    "/MusicLinkSharing/assets/img/icons/deezer-512.png": "ba3f08fa178c6ffe823e626dfbb8ffaa4454b956",
+    "/MusicLinkSharing/assets/img/icons/deezer-64.png": "1d8a4ab28b7137416f20ba9d844877185446ccf0",
+    "/MusicLinkSharing/assets/img/icons/google-play-music-128.png": "156a3c4ff0ab64554ae87baddf4316f9326a9884",
+    "/MusicLinkSharing/assets/img/icons/google-play-music-256.png": "6c88f1a47561582b59c067aee037b3e11d5c2fd9",
+    "/MusicLinkSharing/assets/img/icons/google-play-music-512.png": "6c5a2e8e5c5f1781c2e9c4dd310568ce783bc259",
+    "/MusicLinkSharing/assets/img/icons/google-play-music-64.png": "92ea05c314ef199dfce1f034259132273d33eab1",
+    "/MusicLinkSharing/assets/img/icons/itunes-128.png": "5114e5b7ab1187731bd119c926552faea1cc9dcb",
+    "/MusicLinkSharing/assets/img/icons/itunes-256.png": "663f9e507618088ae8decf024326a38853cffee1",
+    "/MusicLinkSharing/assets/img/icons/itunes-512.png": "57b9fa957377ea4a4d4eca2fd679e2324949def1",
+    "/MusicLinkSharing/assets/img/icons/itunes-64.png": "4c1c5c60b9427cfaafe0b6291cdf6fda54bc4482",
+    "/MusicLinkSharing/assets/img/icons/pandora-128.png": "a20a7b2194c0143c5739da82dc04145e5f722ed3",
+    "/MusicLinkSharing/assets/img/icons/pandora-256.png": "82924d0a4835ebf2cc77caf32ca0918962abb5fd",
+    "/MusicLinkSharing/assets/img/icons/pandora-512.png": "297d4bfdae4f1c0fcaff68b82752785936a481e5",
+    "/MusicLinkSharing/assets/img/icons/pandora-64.png": "b0fd3cc182312f206303fbdc127891aab2e8be86",
+    "/MusicLinkSharing/assets/img/icons/soundcloud-128.png": "97b6dbdd38c9c83ce1e79f7b5182a056259e3583",
+    "/MusicLinkSharing/assets/img/icons/soundcloud-256.png": "beef5f7d11c818195b3a6199a7480b1a8356421c",
+    "/MusicLinkSharing/assets/img/icons/soundcloud-512.png": "edf4e228135b5d63c935799a03111677fd86f0cf",
+    "/MusicLinkSharing/assets/img/icons/soundcloud-64.png": "1ada1f74f2f64f9d186ad6d340acce09a8c8e714",
+    "/MusicLinkSharing/assets/img/icons/spotify-128.png": "d630e2344b0d68f494906722adc1d23bcd578bc3",
+    "/MusicLinkSharing/assets/img/icons/spotify-256.png": "0c283bab04d9c34c5138bd04fa447fa4b85e9104",
+    "/MusicLinkSharing/assets/img/icons/spotify-512.png": "ad4c8f86e62a3cfd3d0b98ad496470fe2bd5fd1e",
+    "/MusicLinkSharing/assets/img/icons/spotify-64.png": "97a6322e310f35f0ebb042e42423ad53da7098ad",
+    "/MusicLinkSharing/assets/img/icons/youtube-music-128.png": "f72392ffcb9b3e4ac4ced636504d43b7ea75edc8",
+    "/MusicLinkSharing/assets/img/icons/youtube-music-256.png": "3a99f9c754fa73704c9bcc4ee30225b0ca638006",
+    "/MusicLinkSharing/assets/img/icons/youtube-music-512.png": "414835705aea51df26dafb7af59b1d6cfacda6c3",
+    "/MusicLinkSharing/assets/img/icons/youtube-music-64.png": "74d403d2c6b7e3df9d97cbf7d9f2e4621d20b6e9",
+    "/MusicLinkSharing/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/MusicLinkSharing/index.html": "a0b6d06ac274aad98074485294fa4275f9db799c",
+    "/MusicLinkSharing/main.1293cdcf0b7d2f9dc7df.js": "dbee611e317d04dfa6f6d4f653d9d0c8a0495025",
+    "/MusicLinkSharing/polyfills.4b6db43574e16dcaa81b.js": "6eef1a5be27e52b91e576aae90a5059b177ce7ae",
+    "/MusicLinkSharing/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/MusicLinkSharing/styles.e63cc10e918fe1d73fb8.css": "1f2e401f8fc89dbe362758348b0abaf20a35de47"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
