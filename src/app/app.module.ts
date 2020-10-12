@@ -27,6 +27,8 @@ import { CardShareLinkComponent } from './layout/card-share-link/card-share-link
 import { HomeLinkFinderComponent } from './home-link-finder/home-link-finder.component';
 import { HomeUniversalSearchComponent } from './home-universal-search/home-universal-search.component';
 import { LoadingIconComponent } from './layout/loading-icon/loading-icon.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { LoadingIconComponent } from './layout/loading-icon/loading-icon.compone
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ClipboardModule
+    ClipboardModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
