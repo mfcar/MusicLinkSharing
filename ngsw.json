@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1602557989565,
+  "timestamp": 1602642525650,
   "index": "/MusicLinkSharing/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "/MusicLinkSharing/main.1293cdcf0b7d2f9dc7df.js",
         "/MusicLinkSharing/polyfills.4b6db43574e16dcaa81b.js",
         "/MusicLinkSharing/runtime.acf0dec4155e77772545.js",
-        "/MusicLinkSharing/styles.e63cc10e918fe1d73fb8.css"
+        "/MusicLinkSharing/styles.b2a9f44e043091507c08.css"
       ],
       "patterns": []
     },
@@ -107,11 +107,11 @@
     "/MusicLinkSharing/assets/img/icons/youtube-music-512.png": "414835705aea51df26dafb7af59b1d6cfacda6c3",
     "/MusicLinkSharing/assets/img/icons/youtube-music-64.png": "74d403d2c6b7e3df9d97cbf7d9f2e4621d20b6e9",
     "/MusicLinkSharing/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/MusicLinkSharing/index.html": "a0b6d06ac274aad98074485294fa4275f9db799c",
+    "/MusicLinkSharing/index.html": "03bce38d687c17bd053e848df2da063e3c620486",
     "/MusicLinkSharing/main.1293cdcf0b7d2f9dc7df.js": "dbee611e317d04dfa6f6d4f653d9d0c8a0495025",
     "/MusicLinkSharing/polyfills.4b6db43574e16dcaa81b.js": "6eef1a5be27e52b91e576aae90a5059b177ce7ae",
     "/MusicLinkSharing/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/MusicLinkSharing/styles.e63cc10e918fe1d73fb8.css": "1f2e401f8fc89dbe362758348b0abaf20a35de47"
+    "/MusicLinkSharing/styles.b2a9f44e043091507c08.css": "d9f9e70b4aa70cdda13394d13e0c7333d9b1a26e"
   },
   "navigationUrls": [
     {
