@@ -1,4 +1,72 @@
-<p>Find your music/album/artist in another platforms:</p>
-<p>
-  <app-home-link-finder></app-home-link-finder>
-</p>
+<ul class="w-full max-w-md">
+  <app-link-search-card></app-link-search-card>
+  <ng-container *ngIf="hasResult; else formLoadingContent">
+    <li
+      class="mb-3 mr-2 ml-2 flex justify-between items-center bg-white hover:bg-gray-200 shadow hover:shadow-2xl rounded-lg">
+      <div class="container mx-auto max-w-xs rounded-lg overflow-hidden shadow-lg my-2 bg-white">
+        <div class="relative mb-6">
+          <img class="w-full" src="https://i.scdn.co/image/ab67616d00001e02cdac19bbaee5cc123edcc26f"
+               alt="Profile picture"/>
+          <div class="text-center absolute w-full" style="bottom: -30px">
+            <button
+              class="p-4 rounded-full transition ease-in duration-200 focus:outline-none bg-white shadow-lg  border-green-200 border-4">
+              <img class="w-10 h-10 rounded-full" src="./assets/img/icons/spotify-128.png" alt="Spotify Icon">
+            </button>
+          </div>
+        </div>
+        <div class="py-2 px-3 text-center tracking-wide">
+          <p>
+            <span class="text-lg font-semibold">Bridge Burning</span>
+            <span class="ml-2 px-2 py-1 bg-red-600 text-sm text-white rounded">Explicit</span>
+          </p>
+          <p class="text-gray-500 text-base">Wasting Light</p>
+          <p class="text-gray-500 text-sm">Foo Fighters</p>
+        </div>
+        <div class="py-1 px-3 text-center tracking-wide grid grid-cols-2 gap-6">
+          <div class="duration">
+            <p class="text-lg">324</p>
+            <p class="text-gray-500 text-sm">Duration</p>
+          </div>
+          <div class="release">
+            <p class="text-lg">7542</p>
+            <p class="text-gray-500 text-sm">Released</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      class="p-4 m-3 flex justify-between items-center bg-white hover:bg-gray-200 shadow hover:shadow-2xl rounded-lg transform transition-all duration-300 scale-100 hover:scale-95">
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full" src="./assets/img/icons/spotify-64.png" alt="Spotify Icon">
+        <p class="ml-2 text-gray-700 font-semibold font-sans tracking-wide">Spotify</p>
+      </div>
+      <div class="flex">
+        <app-share-button></app-share-button>
+      </div>
+    </li>
+    <li
+      class="p-4 m-3 flex justify-between items-center bg-white hover:bg-gray-200 shadow hover:shadow-2xl rounded-lg transform transition-all duration-300 scale-100 hover:scale-95">
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full" src="./assets/img/icons/itunes-64.png" alt="Apple Music Icon">
+        <p class="ml-2 text-gray-700 font-semibold font-sans tracking-wide">Apple Music</p>
+      </div>
+      <div class="flex">
+        <app-share-button></app-share-button>
+      </div>
+    </li>
+    <li
+      class="p-4 m-3 flex justify-between items-center bg-white hover:bg-gray-200 shadow hover:shadow-2xl rounded-lg transform transition-all duration-300 scale-100 hover:scale-95">
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full" src="./assets/img/icons/deezer-64.png" alt="Deezer Icon">
+        <p class="ml-2 text-gray-700 font-semibold font-sans tracking-wide">Deezer</p>
+      </div>
+      <div class="flex">
+        <app-share-button></app-share-button>
+      </div>
+    </li>
+  </ng-container>
+  <ng-template #formLoadingContent>
+    <app-loading-card></app-loading-card>
+    <app-error-card></app-error-card>
+  </ng-template>
+</ul>

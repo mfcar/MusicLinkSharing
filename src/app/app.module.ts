@@ -9,7 +9,6 @@ import { PasteUrlBarComponent } from './layout/paste-url-bar/paste-url-bar.compo
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {ClipboardModule} from '@angular/cdk/clipboard';
-import { HomeLinkFinderComponent } from './home-link-finder/home-link-finder.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ShareButtonComponent } from './shared/components/share-button/share-button.component';
@@ -26,7 +25,6 @@ import { LinkSearchCardComponent } from './shared/cards/link-search-card/link-se
     HomeComponent,
     PageNotFoundComponent,
     PasteUrlBarComponent,
-    HomeLinkFinderComponent,
     ShareButtonComponent,
     PasteClipboardButtonComponent,
     LoadingCardComponent,
