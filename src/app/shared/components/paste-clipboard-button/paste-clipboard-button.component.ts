@@ -1,4 +1,5 @@
-import {Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import * as linkify from 'linkifyjs';
 
 @Component({
   selector: 'app-paste-clipboard-button',
@@ -11,18 +12,16 @@ export class PasteClipboardButtonComponent implements OnInit {
   @Output() urlPasted = new EventEmitter();
 
   ngOnInit(): void {
-    if (navigator.clipboard) {
-      this.showButton = true;
-    } else {
-      this.showButton = false;
-    }
+    this.showButton = !!navigator.clipboard;
   }
 
   clickPasteFromClipboard(): void {
     navigator.clipboard.readText()
       .then(text => {
-        this.clipboardContent = text;
-        this.urlPasted.emit(this.clipboardContent);
+        if (linkify.test(text)) {
+          this.clipboardContent = text;
+          this.urlPasted.emit(this.clipboardContent);
+        }
       })
       .catch(error => {
         console.log(`Error on get text from clipboard:\n${error}`);
