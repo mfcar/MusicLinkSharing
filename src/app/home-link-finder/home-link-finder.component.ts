@@ -48,6 +48,7 @@ export class HomeLinkFinderComponent implements OnInit {
   receiverUrlPasted(url: string): void {
     console.log('Url pasted:');
     console.log(url);
+    window.alert(url);
   }
 
 }
