@@ -31,6 +31,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ShareButtonComponent } from './shared/components/share-button/share-button.component';
 import { PasteClipboardButtonComponent } from './shared/components/paste-clipboard-button/paste-clipboard-button.component';
+import { LoadingPanelComponent } from './shared/components/loading-panel/loading-panel.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { PasteClipboardButtonComponent } from './shared/components/paste-clipboa
     HomeUniversalSearchComponent,
     LoadingIconComponent,
     ShareButtonComponent,
-    PasteClipboardButtonComponent
+    PasteClipboardButtonComponent,
+    LoadingPanelComponent
   ],
   imports: [
     BrowserModule,
