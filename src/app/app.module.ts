@@ -15,7 +15,6 @@ import { ShareButtonComponent } from './shared/components/share-button/share-but
 import { PasteClipboardButtonComponent } from './shared/components/paste-clipboard-button/paste-clipboard-button.component';
 import { LoadingCardComponent } from './shared/cards/loading-card/loading-card.component';
 import { ErrorCardComponent } from './shared/cards/error-card/error-card.component';
-import { TrackCardComponent } from './shared/cards/track-card/track-card.component';
 import { TrackInfoCardComponent } from './shared/cards/track-info-card/track-info-card.component';
 import { LinkSearchCardComponent } from './shared/cards/link-search-card/link-search-card.component';
 
@@ -29,7 +28,6 @@ import { LinkSearchCardComponent } from './shared/cards/link-search-card/link-se
     PasteClipboardButtonComponent,
     LoadingCardComponent,
     ErrorCardComponent,
-    TrackCardComponent,
     TrackInfoCardComponent,
     LinkSearchCardComponent
   ],
