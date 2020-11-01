@@ -29,6 +29,7 @@ import { HomeUniversalSearchComponent } from './home-universal-search/home-unive
 import { LoadingIconComponent } from './layout/loading-icon/loading-icon.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ShareButtonComponent } from './shared/components/share-button/share-button.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { environment } from '../environments/environment';
     CardShareLinkComponent,
     HomeLinkFinderComponent,
     HomeUniversalSearchComponent,
-    LoadingIconComponent
+    LoadingIconComponent,
+    ShareButtonComponent
   ],
   imports: [
     BrowserModule,
