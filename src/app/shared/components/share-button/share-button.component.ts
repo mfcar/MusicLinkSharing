@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-share-button',
@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ShareButtonComponent {
   @Input() title = 'WebShare API';
   @Input() text = '';
-  @Input() url = location.href;
+  @Input() url = 'https://open.spotify.com/track/20I6sIOMTCkB6w7ryavxtO';
 
   clickShare(): void {
     navigator.share({
