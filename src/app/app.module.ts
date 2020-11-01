@@ -32,6 +32,7 @@ import { environment } from '../environments/environment';
 import { ShareButtonComponent } from './shared/components/share-button/share-button.component';
 import { PasteClipboardButtonComponent } from './shared/components/paste-clipboard-button/paste-clipboard-button.component';
 import { LoadingPanelComponent } from './shared/components/loading-panel/loading-panel.component';
+import { ErrorPanelComponent } from './shared/components/error-panel/error-panel.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { LoadingPanelComponent } from './shared/components/loading-panel/loading
     LoadingIconComponent,
     ShareButtonComponent,
     PasteClipboardButtonComponent,
-    LoadingPanelComponent
+    LoadingPanelComponent,
+    ErrorPanelComponent
   ],
   imports: [
     BrowserModule,
