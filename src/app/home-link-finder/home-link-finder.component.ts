@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SpotifyTrack} from '../shared/models/spotify.model';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {SpotifyService} from '../shared/services/spotify.service';
@@ -43,6 +43,11 @@ export class HomeLinkFinderComponent implements OnInit {
     }, () => {
       this.searchingState = false;
     });
+  }
+
+  receiverUrlPasted(url: string): void {
+    console.log('Url pasted:');
+    console.log(url);
   }
 
 }

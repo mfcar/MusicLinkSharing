@@ -30,6 +30,7 @@ import { LoadingIconComponent } from './layout/loading-icon/loading-icon.compone
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ShareButtonComponent } from './shared/components/share-button/share-button.component';
+import { PasteClipboardButtonComponent } from './shared/components/paste-clipboard-button/paste-clipboard-button.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ShareButtonComponent } from './shared/components/share-button/share-but
     HomeLinkFinderComponent,
     HomeUniversalSearchComponent,
     LoadingIconComponent,
-    ShareButtonComponent
+    ShareButtonComponent,
+    PasteClipboardButtonComponent
   ],
   imports: [
     BrowserModule,
