@@ -12,6 +12,7 @@ import {UrlBreakService} from '../shared/services/url-break.service';
 export class HomeLinkFinderComponent implements OnInit {
   public track: SpotifyTrack | undefined;
   public searchingState = false;
+  public hasResult = false;
 
   public formUrlBreaker = new FormGroup({
     url: new FormControl('', [
