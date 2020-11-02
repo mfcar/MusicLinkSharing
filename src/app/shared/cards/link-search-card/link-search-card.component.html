@@ -1,9 +1,9 @@
 <li
-  class="p-1 m-3 flex justify-between items-center bg-white shadow hover:shadow-2xl rounded-lg">
+  class="p-2 mb-3 mr-1 ml-1  flex justify-between items-center bg-white shadow hover:shadow-2xl rounded-lg">
   <form [formGroup]="formUrlBreaker" (ngSubmit)="breakUrl()">
-    <p>Find your music/album/artist in another platforms:</p>
+    <p class="text-gray-600">Find your music/album/artist in another platforms:</p>
     <div class="p-4">
-      <div class="bg-white flex rounded shadow-xl">
+      <div class="flex">
         <input class="w-full py-2 px-6 text-gray-700 leading-tight focus:outline-none" id="txtUrl" type="url"
                formControlName="url" placeholder="Paste your URL" (keydown.enter)="breakUrl()">
         <div class="p-2">
