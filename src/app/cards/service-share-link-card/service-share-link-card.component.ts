@@ -7,7 +7,7 @@ import {ServiceShareLinkCard} from './service-share-link-card.model';
   styleUrls: ['./service-share-link-card.component.scss']
 })
 export class ServiceShareLinkCardComponent implements OnInit {
-  @Input() shareLink: ServiceShareLinkCard;
+  @Input() shareLink: ServiceShareLinkCard | undefined;
 
   constructor() { }
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {SpotifyTrack} from '../../models/spotify.model';
+import {SpotifyTrack} from '../../shared/models/spotify.model';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {SpotifyService} from '../../services/spotify.service';
-import {UrlBreakService} from '../../services/url-break.service';
+import {SpotifyService} from '../../shared/services/spotify.service';
+import {UrlBreakService} from '../../shared/services/url-break.service';
 
 @Component({
   selector: 'app-link-search-card',

@@ -12,11 +12,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ShareButtonComponent } from './shared/components/share-button/share-button.component';
 import { PasteClipboardButtonComponent } from './shared/components/paste-clipboard-button/paste-clipboard-button.component';
-import { LoadingCardComponent } from './shared/cards/loading-card/loading-card.component';
-import { ErrorCardComponent } from './shared/cards/error-card/error-card.component';
-import { TrackInfoCardComponent } from './shared/cards/track-info-card/track-info-card.component';
-import { LinkSearchCardComponent } from './shared/cards/link-search-card/link-search-card.component';
-import { ServiceShareLinkCardComponent } from './shared/cards/service-share-link-card/service-share-link-card.component';
+import { LoadingCardComponent } from './cards/loading-card/loading-card.component';
+import { ErrorCardComponent } from './cards/error-card/error-card.component';
+import { TrackInfoCardComponent } from './cards/track-info-card/track-info-card.component';
+import { LinkSearchCardComponent } from './cards/link-search-card/link-search-card.component';
+import { ServiceShareLinkCardComponent } from './cards/service-share-link-card/service-share-link-card.component';
 
 @NgModule({
   declarations: [
