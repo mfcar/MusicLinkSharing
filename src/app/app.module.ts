@@ -18,6 +18,8 @@ import { TrackInfoCardComponent } from './cards/track-info-card/track-info-card.
 import { LinkSearchCardComponent } from './cards/link-search-card/link-search-card.component';
 import { ServiceShareLinkCardComponent } from './cards/service-share-link-card/service-share-link-card.component';
 import { AlbumInfoCardComponent } from './cards/album-info-card/album-info-card.component';
+import { AboutComponent } from './about/about.component';
+import { InfoCalloutComponent } from './shared/components/info-callout/info-callout.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { AlbumInfoCardComponent } from './cards/album-info-card/album-info-card.
     TrackInfoCardComponent,
     LinkSearchCardComponent,
     ServiceShareLinkCardComponent,
-    AlbumInfoCardComponent
+    AlbumInfoCardComponent,
+    AboutComponent,
+    InfoCalloutComponent
   ],
   imports: [
     BrowserModule,
