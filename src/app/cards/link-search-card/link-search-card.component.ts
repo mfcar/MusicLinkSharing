@@ -32,15 +32,13 @@ export class LinkSearchCardComponent {
   search(): void {
     this.loading.emit('Verifying URL...');
     this.searchingState = true;
-    if (linkify.test(this.formLinkSearch.controls.url.value)) {
-      console.log('Breaking URL:');
-      console.log(this.urlBreak.urlBreaking(this.formLinkSearch.controls.url.value));
 
+    if (linkify.test(this.formLinkSearch.controls.url.value)) {
       const url = this.urlBreak.urlBreaking(this.formLinkSearch.controls.url.value);
 
       let objectId = '';
-
       const objectMusicService = this.urlBreak.getMusicServiceFromUrl(url?.origin);
+
       switch (objectMusicService) {
         case MusicService.Spotify:
           objectId = this.spotifyService.getTrackIdFromUrl(url?.pathname);
@@ -49,14 +47,13 @@ export class LinkSearchCardComponent {
             this.resultSuccess.emit(this.spotifyService.returnTrackInfoCard(trackInfo));
             this.searchingState = false;
           }, (error) => {
-            console.log('Error:');
-            console.log(error);
             this.resultError.emit(error.message);
             this.searchingState = false;
           });
           break;
         default:
           this.resultError.emit('Streaming service not support.');
+          this.searchingState = false;
       }
     } else {
       this.resultError.emit('The value is not a valid URL.');
