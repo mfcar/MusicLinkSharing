@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { PasteUrlBarComponent } from './layout/paste-url-bar/paste-url-bar.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {ClipboardModule} from '@angular/cdk/clipboard';
@@ -24,7 +23,6 @@ import { ServiceShareLinkCardComponent } from './shared/cards/service-share-link
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    PasteUrlBarComponent,
     ShareButtonComponent,
     PasteClipboardButtonComponent,
     LoadingCardComponent,
