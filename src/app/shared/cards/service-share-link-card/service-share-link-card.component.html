@@ -1,0 +1,12 @@
+<ng-container *ngIf="shareLink">
+  <li
+    class="p-4 m-3 flex justify-between items-center bg-white hover:bg-gray-200 shadow hover:shadow-2xl rounded-lg transform transition-all duration-300 scale-100 hover:scale-95">
+    <div class="flex items-center">
+      <img class="w-10 h-10 rounded-full" src="./assets/img/icons/spotify-64.png" alt="Spotify Icon">
+      <p class="ml-2 text-gray-700 font-semibold font-sans tracking-wide">Spotify</p>
+    </div>
+    <div class="flex">
+      <app-share-button [url]="shareLink.url"></app-share-button>
+    </div>
+  </li>
+</ng-container>

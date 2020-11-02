@@ -17,6 +17,7 @@ import { LoadingCardComponent } from './shared/cards/loading-card/loading-card.c
 import { ErrorCardComponent } from './shared/cards/error-card/error-card.component';
 import { TrackInfoCardComponent } from './shared/cards/track-info-card/track-info-card.component';
 import { LinkSearchCardComponent } from './shared/cards/link-search-card/link-search-card.component';
+import { ServiceShareLinkCardComponent } from './shared/cards/service-share-link-card/service-share-link-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LinkSearchCardComponent } from './shared/cards/link-search-card/link-se
     LoadingCardComponent,
     ErrorCardComponent,
     TrackInfoCardComponent,
-    LinkSearchCardComponent
+    LinkSearchCardComponent,
+    ServiceShareLinkCardComponent
   ],
   imports: [
     BrowserModule,
