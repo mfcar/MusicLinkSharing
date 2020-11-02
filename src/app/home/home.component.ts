@@ -1,55 +1,59 @@
-import { Component, OnInit } from '@angular/core';
-import {SpotifyTrack} from '../shared/models/spotify.model';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {SpotifyService} from '../shared/services/spotify.service';
-import {UrlBreakService} from '../shared/services/url-break.service';
+import {Component} from '@angular/core';
+import {TrackInfoCard} from '../cards/track-info-card/track-info-card.model';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-  public track: SpotifyTrack | undefined;
-  public searchingState = false;
-  public hasResult = true;
+export class HomeComponent {
+  public hasResult = false;
+  public hasError = false;
+  public isLoading = false;
+  public loadingText = '';
+  public errorText = '';
+  public trackInfo: TrackInfoCard | undefined;
 
-  public formUrlBreaker = new FormGroup({
-    url: new FormControl('', [
-      Validators.required,
-      Validators.minLength(1)
-    ]),
-  });
-
-  constructor(private spotifyService: SpotifyService, private urlBreak: UrlBreakService) {
+  receiverLoading(event: string): void {
+    console.log('receiverLoading:');
+    console.log(event);
+    this.loadingText = event;
+    this.showLoadingCard();
   }
 
-  ngOnInit(): void {
+  receiverResultError(event: string): void {
+    console.log('receiverResultError:');
+    console.log(event);
+    this.errorText = event;
+    this.showErrorCard();
   }
 
-  breakUrl(): void {
-    this.searchingState = true;
-    console.log('Breaking URL:');
-    console.log(this.urlBreak.urlBreaking(this.formUrlBreaker.controls.url.value));
-
-    const url = this.urlBreak.urlBreaking(this.formUrlBreaker.controls.url.value);
-    const objectId = this.spotifyService.getTrackIdFromUrl(url?.pathname);
-
-    this.spotifyService.getInfoByTrackId(objectId).subscribe((trackInfo) => {
-      this.track = trackInfo;
-    }, (error) => {
-      console.log('Error:');
-      console.log(error);
-      this.searchingState = false;
-    }, () => {
-      this.searchingState = false;
-    });
+  receiverResultSuccess(event: Event): void {
+    console.log('receiverResultSuccess:');
+    console.log(event);
+    this.showSuccessCard();
   }
 
-  receiverUrlPasted(url: string): void {
-    console.log('Url pasted:');
-    console.log(url);
-    window.alert(url);
+  showLoadingCard(): void {
+    this.hasResult = false;
+    this.hasError = false;
+    this.isLoading = true;
+    this.errorText = '';
+  }
+
+  showErrorCard(): void {
+    this.hasResult = false;
+    this.hasError = true;
+    this.isLoading = false;
+    this.loadingText = '';
+  }
+
+  showSuccessCard(): void {
+    this.hasResult = true;
+    this.hasError = false;
+    this.isLoading = false;
+    this.errorText = '';
+    this.loadingText = '';
   }
 
 }

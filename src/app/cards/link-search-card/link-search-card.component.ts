@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {SpotifyTrack} from '../../shared/models/spotify.model';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {SpotifyService} from '../../shared/services/spotify.service';
 import {UrlBreakService} from '../../shared/services/url-break.service';
+import * as linkify from 'linkifyjs';
 
 @Component({
   selector: 'app-link-search-card',
@@ -10,11 +11,14 @@ import {UrlBreakService} from '../../shared/services/url-break.service';
   styleUrls: ['./link-search-card.component.scss']
 })
 export class LinkSearchCardComponent implements OnInit {
+  @Output() loading = new EventEmitter();
+  @Output() resultSuccess = new EventEmitter();
+  @Output() resultError = new EventEmitter();
   public track: SpotifyTrack | undefined;
   public searchingState = false;
   public hasResult = false;
 
-  public formUrlBreaker = new FormGroup({
+  public formLinkSearch = new FormGroup({
     url: new FormControl('', [
       Validators.required,
       Validators.minLength(1)
@@ -27,29 +31,29 @@ export class LinkSearchCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  breakUrl(): void {
+  search(): void {
+    this.loading.emit('Verifying URL...');
     this.searchingState = true;
-    console.log('Breaking URL:');
-    console.log(this.urlBreak.urlBreaking(this.formUrlBreaker.controls.url.value));
+    if (linkify.test(this.formLinkSearch.controls.url.value)) {
+      console.log('Breaking URL:');
+      console.log(this.urlBreak.urlBreaking(this.formLinkSearch.controls.url.value));
 
-    const url = this.urlBreak.urlBreaking(this.formUrlBreaker.controls.url.value);
-    const objectId = this.spotifyService.getTrackIdFromUrl(url?.pathname);
+      const url = this.urlBreak.urlBreaking(this.formLinkSearch.controls.url.value);
+      const objectId = this.spotifyService.getTrackIdFromUrl(url?.pathname);
 
-    this.spotifyService.getInfoByTrackId(objectId).subscribe((trackInfo) => {
-      this.track = trackInfo;
-    }, (error) => {
-      console.log('Error:');
-      console.log(error);
+      this.spotifyService.getInfoByTrackId(objectId).subscribe((trackInfo) => {
+        this.track = trackInfo;
+        this.resultSuccess.emit('testing');
+        this.searchingState = false;
+      }, (error) => {
+        console.log('Error:');
+        console.log(error);
+        this.resultError.emit(error.message);
+        this.searchingState = false;
+      });
+    } else {
+      this.resultError.emit('The value is not a valid URL.');
       this.searchingState = false;
-    }, () => {
-      this.searchingState = false;
-    });
+    }
   }
-
-  receiverUrlPasted(url: string): void {
-    console.log('Url pasted:');
-    console.log(url);
-    window.alert(url);
-  }
-
 }
