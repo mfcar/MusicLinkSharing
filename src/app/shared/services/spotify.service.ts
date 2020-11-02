@@ -6,6 +6,8 @@ import {environment} from '../../../environments/environment';
 import {StorageService} from './storage.service';
 import {Token} from '../models/auth.model';
 import {ObjectType} from '../models/object-type.enum';
+import {TrackInfoCard} from '../../cards/track-info-card/track-info-card.model';
+import {MusicService} from '../models/music-service.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -75,5 +77,18 @@ export class SpotifyService {
   public getArtistIdFromUrl(pathName: string): string {
     const parameters = pathName.split('/');
     return parameters[1];
+  }
+
+  public returnTrackInfoCard(track: SpotifyTrack): TrackInfoCard {
+    const trackInfo = {
+      albumName: track.album.name,
+      artist: track.artists[0].name,
+      trackName: track.name,
+      duration: track.duration_ms,
+      explicit: track.explicit,
+      streamingService: MusicService.Spotify,
+      albumArtworkUrl: track.album.images[0].url
+    } as TrackInfoCard;
+    return trackInfo;
   }
 }

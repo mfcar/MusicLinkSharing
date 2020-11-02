@@ -12,7 +12,7 @@ export class HomeComponent {
   public isLoading = false;
   public loadingText = '';
   public errorText = '';
-  public trackInfo: TrackInfoCard | undefined;
+  public objectInfo: TrackInfoCard | undefined;
 
   receiverLoading(event: string): void {
     console.log('receiverLoading:');
@@ -28,9 +28,10 @@ export class HomeComponent {
     this.showErrorCard();
   }
 
-  receiverResultSuccess(event: Event): void {
+  receiverResultSuccess(event: TrackInfoCard): void {
     console.log('receiverResultSuccess:');
     console.log(event);
+    this.objectInfo = event;
     this.showSuccessCard();
   }
 

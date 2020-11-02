@@ -19,16 +19,16 @@ export class UrlBreakService {
     return urlObject;
   }
 
-  public getMusicServiceFromUrl(origin: string): MusicService {
-    if (origin.includes('spotify')) {
+  public getMusicServiceFromUrl(origin: string | undefined): MusicService {
+    if (origin?.includes('spotify')) {
       return MusicService.Spotify;
     }
 
-    if (origin.includes('apple')) {
+    if (origin?.includes('apple')) {
       return MusicService.AppleMusic;
     }
 
-    if (origin.includes('deezer')) {
+    if (origin?.includes('deezer')) {
       return MusicService.Deezer;
     }
 

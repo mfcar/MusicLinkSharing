@@ -1,5 +1,6 @@
 <ul class="w-full max-w-md mt-3">
-  <app-link-search-card (loading)="receiverLoading($event)" (resultError)="receiverResultError($event)" (resultSuccess)="receiverResultSuccess($event)"></app-link-search-card>
+  <app-link-search-card (loading)="receiverLoading($event)" (resultError)="receiverResultError($event)"
+                        (resultSuccess)="receiverResultSuccess($event)"></app-link-search-card>
   <ng-container *ngIf="isLoading">
     <app-loading-card [loadingText]="loadingText"></app-loading-card>
   </ng-container>
@@ -7,7 +8,9 @@
     <app-error-card [errorText]="errorText"></app-error-card>
   </ng-container>
   <ng-container *ngIf="hasResult">
-    <app-track-info-card [trackInfo]="trackInfo"></app-track-info-card>
+    <ng-container *ngIf="objectInfo">
+      <app-track-info-card [trackInfo]="objectInfo"></app-track-info-card>
+    </ng-container>
     <app-service-share-link-card></app-service-share-link-card>
   </ng-container>
 </ul>
