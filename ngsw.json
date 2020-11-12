@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604344593550,
+  "timestamp": 1605145050822,
   "index": "/MusicLinkSharing/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/MusicLinkSharing/favicon.ico",
         "/MusicLinkSharing/index.html",
-        "/MusicLinkSharing/main.d25e77455eb25638ff9e.js",
+        "/MusicLinkSharing/main.fb5f246c536a3a3b9106.js",
         "/MusicLinkSharing/polyfills.721bc8b4f3052fe851cb.js",
         "/MusicLinkSharing/runtime.acf0dec4155e77772545.js",
         "/MusicLinkSharing/styles.fcd660354cc3b8016e21.css"
@@ -127,8 +127,8 @@
     "/MusicLinkSharing/fa-solid-900.3ceb50e7bcafb577367c.woff2": "9b592048b9062b00f0b2dd782d70a95b7dc69b83",
     "/MusicLinkSharing/fa-solid-900.46fdbd2d897f8824e63c.woff": "3b86a0ce15d8d534b65e98560e321a933d310688",
     "/MusicLinkSharing/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/MusicLinkSharing/index.html": "5f61f3f88f3955e9ca240e66039c2a70be9bf646",
-    "/MusicLinkSharing/main.d25e77455eb25638ff9e.js": "2f7e26599f471e74da26c9276fd40193748b72f6",
+    "/MusicLinkSharing/index.html": "9a327f5e3604b7055f75021deb7c1283b4bb846a",
+    "/MusicLinkSharing/main.fb5f246c536a3a3b9106.js": "113885c71e66b9dd37a53ea569306c0366e92ffc",
     "/MusicLinkSharing/polyfills.721bc8b4f3052fe851cb.js": "2bb5fee4accf4525cb49263ccd4006a088a6abac",
     "/MusicLinkSharing/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/MusicLinkSharing/styles.fcd660354cc3b8016e21.css": "6619f08cd459f660153c7eeba67da927474b9bad"
@@ -150,5 +150,6 @@
       "positive": false,
       "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
-  ]
+  ],
+  "navigationRequestStrategy": "performance"
 }
